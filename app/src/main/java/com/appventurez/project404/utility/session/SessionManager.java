@@ -67,11 +67,11 @@ public class SessionManager {
 
 
 
-    public boolean isRemember() {
+    public boolean isRememberPermission() {
         return pref.getBoolean(PrefConstant.IS_REMEMBER);
     }
 
-    public void setRemember(boolean b) {
+    public void setRememberPermission(boolean b) {
         pref.setBooleanData(PrefConstant.IS_REMEMBER, b);
     }
 
