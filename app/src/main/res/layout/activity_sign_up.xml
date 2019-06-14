@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33ADB9"
+        android:orientation="vertical"
+        tools:context=".ui.Signup.SignUpActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:gravity="center"
+                android:text="PROJECT404"
+                android:textColor="#FEDD33"
+                android:textSize="40sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/email_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="280dp"
+                android:background="#FFF"
+                android:hint="EMAIL"
+                android:paddingStart="20dp"
+                android:textColor="#FEDD33"
+                android:textColorHint="#000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/password_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="340dp"
+                android:background="#FFF"
+                android:hint="PASSWORD"
+                android:paddingStart="20dp"
+                android:textColor="#FEDD33"
+                android:textColorHint="#000"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/register_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="400dp"
+                android:text="REGISTER" />
+
+            <Button
+                android:id="@+id/forgot_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="470dp"
+                android:text="FORGOT PASSWORD" />
+
+            <Button
+                android:id="@+id/login_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="540dp"
+                android:text="Login! Already A MEMBER" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

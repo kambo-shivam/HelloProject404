@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.MyLocalRoom.MyLocalRoomActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter something " />
+
+        <EditText
+            android:id="@+id/edit_text_db"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE" />
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE WORD" />
+
+        <Button
+            android:id="@+id/delete_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CLEAR ALL" />
+
+        <Button
+            android:id="@+id/delete_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELETE SELECTED" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</layout>

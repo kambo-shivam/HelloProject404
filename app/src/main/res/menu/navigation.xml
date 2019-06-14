@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu1"
+        android:icon="@drawable/common_google_signin_btn_text_dark"
+        android:title="Bottom1" />
+    <item
+        android:id="@+id/menu2"
+        android:icon="@drawable/common_google_signin_btn_text_dark"
+        android:title="Bottom2" />
+    <item
+        android:id="@+id/menu3"
+        android:icon="@drawable/common_google_signin_btn_text_dark"
+        android:title="Bottom3" />
+    <item
+        android:id="@+id/menu4"
+        android:icon="@drawable/common_google_signin_btn_text_dark"
+        android:title="Bottom4" />
+
+</menu>

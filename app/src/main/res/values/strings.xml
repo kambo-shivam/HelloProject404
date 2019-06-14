@@ -1,0 +1,233 @@
+<resources>
+    <string name="app_name">Project404</string>
+
+
+    <string name="something_went_wrong">Something went wrong.</string>
+    <string name="no_internet_error_msg">No internet connection.</string>
+    <string name="press_back_button_to_exit">Press back again to exit.</string>
+    <string name="error_internet">No internet connection.</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="complete_text">Complete Lesson</string>
+    <string name="CancelLesson">You want to complete this lesson?</string>
+    <string name="CancelLesson_text">"Cancel Lesson"</string>
+    <string name="BeforeDateLessonValidation">Completed task lesson can\'t be open.</string>
+    <string name="BeforeDateAmountValidation">Connot open amount due for upcoming lessons.</string>
+    <string name="StartInstrcutionValidation">You can only start lesson between time schedule.</string>
+    <string name="dailyReportUpdated">Daily report updated.</string>
+    <string name="dontStartedyet">You don\'t have any Started lession yet.</string>
+    <string name="blank_vehicle_number">Please enter vehicle number.</string>
+    <string name="currentCancleLessonValidation">You can not cancel previous lesson.</string>
+    <string name="blank_endmiles">Please enter end miles.</string>
+    <string name="blankEnterLessonHours">Please enter lesson hours.</string>
+    <string name="blankEnterTravelTime">Please enter travel time.</string>
+    <string name="blank_BWCertIssueDate">Please enter BW certificate date.</string>
+    <string name="blankPermitIssuerDate">Please enter permit issue date.</string>
+    <string name="blankPermitExpDate">Please enter permit expiry date.</string>
+    <string name="blankBWCerificate">Please enter BW cerificate.</string>
+    <string name="blankPermit">Please enter permit.</string>
+    <string name="Noreport">You have not completed any lesson.</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="responsive_ui">Responsive UI</string>
+    <string name="recipient">Recepient</string>
+    <string name="error_config">Crash Report.</string>
+
+    <string-array name="Slots">
+        <item>Select Slot</item>
+        <item>2 Hours</item>
+        <item>4 Hours</item>
+        <item>6 Hours</item>
+        <item>8 Hours</item>
+        <item>10 Hours</item>
+    </string-array>
+
+    <string-array name="Instructor_arr">
+        <item>Select reason</item>
+        <item>Car Problems</item>
+        <item>Illness</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Student_arr">
+        <item>Select reason</item>
+        <item>No Show</item>
+        <item>No Permit</item>
+        <item>Illness</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="Avail">
+        <item>Type</item>
+        <item>BTW</item>
+        <!--<item>Break</item>
+        <item>Classroom</item>
+        <item>Lunch</item>
+        <item>Leave</item>-->
+    </string-array>
+    <string-array name="School">
+        <item>Select School</item>
+        <item>School1</item>
+        <item>School2</item>
+        <item>School3</item>
+    </string-array>
+    <string-array name="Office">
+        <item>Select Office</item>
+        <item>Office1</item>
+        <item>Office2</item>
+        <item>Office3</item>
+    </string-array>
+    <string-array name="Classroom">
+        <item>Select Classroom</item>
+        <item>Classroom1</item>
+        <item>Classroom2</item>
+        <item>Classroom3</item>
+
+    </string-array>
+    <string-array name="course_name">
+        <item>Select Course</item>
+        <item>BTW</item>
+        <item>Classroom</item>
+    </string-array>
+
+    <string-array name="edit_course_name">
+        <item>BTW</item>
+        <item>Classroom</item>
+    </string-array>
+
+    <string-array name="Message">
+        <item>Sent Mails</item>
+        <item>Inbox Mails</item>
+        <item>Drafts mails</item>
+    </string-array>
+
+    <string name="latlng">Lat/Long:</string>
+    <string name="address">Address:</string>
+    <string name="address_output_string">%1$s %2$s %3$s</string>
+
+    <!-- Latitude, longitude format -->
+    <string name="latitude_longitude">%1$.8f, %2$.8f</string>
+
+    <!-- Messages -->
+    <string name="connected">Client connected</string>
+    <string name="connection_error_code_unknown">Unknown connection error code:  %1$d</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="disconnected">Client disconnected</string>
+    <string name="get_address">Get Address</string>
+    <string name="get_location">Get Location</string>
+    <string name="illegal_argument_exception">        Illegal arguments: Latitude %1$.8f Longitude %2$.8f</string>
+    <string name="invalid_action">Invalid intent action %1$s</string>
+    <string name="invalid_integer_id">Invalid integer request ID: %1$s</string>
+    <string name="IO_Exception_getFromLocation">IO Exception in Geocoder.getFromLocation()</string>
+    <string name="location_requested">Periodic updates requested</string>
+    <string name="location_updated">Location updated</string>
+    <string name="location_update_error">Location update failed</string>
+    <string name="location_update_error_detail">        Location update error. code %1$d message %2$s</string>
+    <string name="location_update_missing_update">Location update error. No incoming location. </string>
+    <string name="location_updates_stopped">Periodic updates stopped</string>
+    <string name="log_new_location">New location: %1$s</string>
+    <string name="no_address_found">No address found for location</string>
+    <string name="no_connection">No connection: Cannot request location</string>
+    <string name="no_data_found">No data found..</string>
+    <string name="no_geocoder_available">Cannot get address. No geocoder available.</string>
+    <string name="no_location_available">Location not available</string>
+    <string name="resolved">Error resolved. Please re-try operation.</string>
+    <string name="no_resolution">Google Play services: unable to resolve connection error.</string>
+    <string name="periodic_update_stop">Stopping periodic updates</string>
+    <string name="play_services_available">Google Play services is available</string>
+    <string name="request_location_updates_in_progress">        Can\'t request location updates, previous request hasn\'t finished</string>
+    <string name="start_updates">Start Updates</string>
+    <string name="stop_updates">Stop Updates</string>
+    <string name="unknown">--Unknown--</string>
+    <string name="SelectDate">Select Date</string>
+    <string name="emptyCheck">please fill</string>
+    <string name="nochangefound">No change found</string>
+    <string name="data_not_empty">Data could not be empty.</string>
+    <string name="unknown_activity_request_code">        Received an unknown activity request code %1$d in onActivityResult.</string>
+
+
+    <string name="login">Login</string>
+    <string name="forgot_your_password">Forgot Password?</string>
+    <string name="forgot_password"><u>Forgot Password</u></string>
+    <string name="submit">Submit</string>
+    <string name="BackTo_signIn"><u>Sign In</u></string>
+    <string name="my_hour">My Hour</string>
+    <string name="give_ninstruction">Give\nInstruction</string>
+    <string name="giveinstruction_land">Give Instruction</string>
+    <string name="schedule_my_availability">Schedule my Availability</string>
+    <string name="click_lesson_by_date">Click Lesson by Date</string>
+    <string name="click_here_for_message">Click Here for Message</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBeRfxsEyd48sA-sWQZHskxGfp6DjnW5Io</string>
+
+    <string name="str_payble">Payable Amount</string>
+    <string name="str_paid">Paid Amount</string>
+
+    <string name="str_due">Due Amount</string>
+
+    <string name="str_detail">Student Detail</string>
+    <string name="str_schdule">Student Schedule</string>
+    <string name="str_payment">Payment Summary</string>
+    <string name="user_name_or_email_id">User Name or Email ID</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="c_property_of_advantage_driving_school">(C) Property of Advantage Driving School</string>
+
+
+    <string name="error_empty_username">Please enter username</string>
+    <string name="error_empty_password">Please enter password</string>
+
+    <string name="error_empty_email">Please enter email</string>
+    <string name="error_empty_valid_email">Please enter valid email</string>
+
+    <!--Screen name-->
+
+    <string name="sc_dahbord">Dashboard</string>
+    <string name="sc_my_profile">My Profile</string>
+    <string name="sc_message">Message</string>
+    <string name="sc_inst_hour">Instructor Hours</string>
+    <string name="sc_my_schedule">My Schedule</string>
+    <string name="sc_check_lession">Check Lessons By Date</string>
+    <string name="sc_give_inst">Give Instruction</string>
+    <string name="sc_std_payment">Student Payment</string>
+    <string name="sc_all_comp_checklist">All Completency CheckList</string>
+    <string name="sc_comp_checklist">Complete CheckList</string>
+    <string name="sc_std_less_his">Student Lesson History</string>
+    <string name="sc_next_less">Next Lesson</string>
+    <string name="str_lession_cancel">your lesson cancel successfully</string>
+    <string name="str_do_you_end">Do you want to end Lesson?</string>
+
+    <string name="valid_email_war">Please enter valid e-mail</string>
+
+
+    <!--<string name="login">Login</string>-->
+
+    <!--<string name="login">Login</string>-->
+
+    <string name="action_today">Today</string>
+    <string name="action_day_view">Day view</string>
+    <string name="action_three_day_view">3 day view</string>
+    <string name="action_week_view">Week view</string>
+    <string name="title_activity_basic">Basic Example</string>
+    <string name="title_activity_asynchronous">Asynchronous Events</string>
+    <string name="async_error">Could not download events from the internet</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="permit_exp_date">Permit Exp. Date :</string>
+    <string name="permit">Permit :</string>
+    <string name="bw_certificate">BW/Certificate :</string>
+    <string name="bw_cert_nissue_date">BW Cert. Issue Date :</string>
+    <string name="permit_issue_date">Permit Issue Date :</string>
+    <string name="lesson_no_can_not_be_empty">Lesson No can not be empty</string>
+    <string name="num_fromat_exception">Number Format Exception</string>
+    <string name="enter_travel_time">Please Enter travel time</string>
+    <string name="enter_valid_time_format">Please Enter valid time format hh:mm:ss</string>
+    <string name="label_error">error</string>
+    <string name="title_activity_home_base">HomeBaseActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
