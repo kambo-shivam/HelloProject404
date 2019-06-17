@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ActivityMainBinding activityMainBinding;
     private boolean rememberPermission = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,9 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void askUserForPermission() {
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) !=
                 PackageManager.PERMISSION_GRANTED) {
-            if (rememberPermission) {
-                showSettingsAlert();
-            } else if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) !=
+            if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) !=
                     PackageManager.PERMISSION_GRANTED) {
 
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 10);
@@ -132,19 +129,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case 10: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     openCamera();
-                } else {
-                    if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_DENIED) {
-
-                        rememberPermission = ActivityCompat.shouldShowRequestPermissionRationale
-                                (this, Manifest.permission.CAMERA);
-                    }
-                    Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
                 }
             }
+
             break;
+
+        }
+        if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
+            showSettingsAlert();
         }
 
     }
+
 
     private void showSettingsAlert() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
