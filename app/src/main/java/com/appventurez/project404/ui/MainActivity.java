@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityMainBinding.postNewApiButton.setOnClickListener(this);
         activityMainBinding.fragments.setOnClickListener(this);
         activityMainBinding.bttnPermission.setOnClickListener(this);
+        activityMainBinding.videoPlay.setOnClickListener(this);
     }
 
     @Override
