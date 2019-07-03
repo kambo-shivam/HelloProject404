@@ -28,6 +28,7 @@ import com.appventurez.project404.ui.fragment.HomeBaseActivity;
 import com.appventurez.project404.ui.newpostapi.AnotherPostApi;
 import com.appventurez.project404.ui.postapi.PostApiActivity;
 import com.appventurez.project404.ui.roomdatabase.LocalDataBaseActivity;
+import com.appventurez.project404.ui.videoplay.VideoPlay;
 import com.appventurez.project404.utility.session.SessionManager;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, GetCallBack {
@@ -73,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.fragments:
                 Intent openFragment = new Intent(this, HomeBaseActivity.class);
                 startActivity(openFragment);
+                break;
+            case R.id.video_play:
+                Intent videoPlay = new Intent(this, VideoPlay.class);
+                startActivity(videoPlay);
                 break;
             case R.id.bttn_permission:
                 if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
