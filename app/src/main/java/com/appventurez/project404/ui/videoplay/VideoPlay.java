@@ -1,5 +1,6 @@
 package com.appventurez.project404.ui.videoplay;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.databinding.DataBindingUtil;
@@ -33,6 +34,7 @@ public class VideoPlay extends BaseActivity implements View.OnClickListener, Rec
     ActivityVideoPlayBinding binding;
     final static int REQUEST = 222;
     VideoListRecycler videoListRecycler;
+    Context context;
     Uri uri;
 
     @Override
@@ -132,11 +134,14 @@ public class VideoPlay extends BaseActivity implements View.OnClickListener, Rec
                     File file1=new File(Environment.getExternalStoragePublicDirectory("you").getAbsolutePath());
                     Log.d("BeforeCompression", String.valueOf((file.length()/(1024*1024))));
                     try {
-                        compresedVideo=SiliCompressor.with(getApplicationContext()).compressVideo(string,file1.getAbsolutePath());
+                        compresedVideo=SiliCompressor.with(context).compressVideo(string,file1.getAbsolutePath());
 
                     } catch (URISyntaxException e) {
                         e.printStackTrace();
                     }
+
+                    File file3=new File(compresedVideo);
+                    Log.d("AfterCompression", String.valueOf((file3.length()/(1024*1024))));
                     return compresedVideo;
                 }
 
