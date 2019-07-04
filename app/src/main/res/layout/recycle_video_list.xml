@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/video_name"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="#fff" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/video_name"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:background="#fff" />
+
+
+            <TextView
+                android:id="@+id/video_size"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:background="#fff" />
+
+            <TextView
+                android:id="@+id/video_size_after_compression"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:background="#fff" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

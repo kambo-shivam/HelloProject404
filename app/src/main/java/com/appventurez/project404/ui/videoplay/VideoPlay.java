@@ -17,6 +17,7 @@ import android.widget.MediaController;
 import android.widget.Toast;
 
 import com.appventurez.project404.R;
+import com.appventurez.project404.common.base.BaseActivity;
 import com.appventurez.project404.databinding.ActivityVideoPlayBinding;
 import com.appventurez.project404.ui.roomdatabase.RecyclerClickListener;
 import com.iceteck.silicompressorr.SiliCompressor;
@@ -28,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
-public class VideoPlay extends AppCompatActivity implements View.OnClickListener, RecyclerClickListener {
+public class VideoPlay extends BaseActivity implements View.OnClickListener, RecyclerClickListener {
     ActivityVideoPlayBinding binding;
     final static int REQUEST = 222;
     VideoListRecycler videoListRecycler;
@@ -115,43 +116,38 @@ public class VideoPlay extends AppCompatActivity implements View.OnClickListener
     public void ItemClick(int pos, String string) {
 
         if (string != null) {
-            File file = new File(string);
-            Log.d("SIZEOFFILEBEFORECOMP", String.valueOf((file.length() / (1024 * 1024))));
 
+/*
             binding.idVideoView.setVideoURI(Uri.parse(string));
             MediaController mediaController = new MediaController(getApplicationContext());
             binding.idVideoView.setMediaController(mediaController);
             mediaController.setAnchorView(binding.idVideoView);
             binding.idVideoView.start();
-
+*/
             new AsyncTask<String, Void, String>() {
                 @Override
                 protected String doInBackground(String... strings) {
-                    String fileVideoPath = null;
+                    String compresedVideo = "";
+                    File file=new File(string);
+                    File file1=new File(Environment.getExternalStoragePublicDirectory("you").getAbsolutePath());
+                    Log.d("BeforeCompression", String.valueOf((file.length()/(1024*1024))));
                     try {
-                        File file1 = new File(string);
-                        fileVideoPath = SiliCompressor.with(getApplicationContext()).compressVideo(string, Environment.getExternalStoragePublicDirectory("you").getAbsolutePath());
-                        Log.d("SIZEOFFILE", String.valueOf((file1.length()) / (1024 * 1024)));
+                        compresedVideo=SiliCompressor.with(getApplicationContext()).compressVideo(string,file1.getAbsolutePath());
 
                     } catch (URISyntaxException e) {
                         e.printStackTrace();
                     }
-                    return fileVideoPath;
+                    return compresedVideo;
                 }
 
                 @Override
-                protected void onPostExecute(String s) {
-                    super.onPostExecute(s);
-                    Log.d("SIZEOFFILE", String.valueOf((s.length()) / (1024 * 1024)));
-                    binding.idVideoView.setVideoURI(Uri.parse(s));
-                    MediaController mediaController = new MediaController(getApplicationContext());
-                    binding.idVideoView.setMediaController(mediaController);
-                    mediaController.setAnchorView(binding.idVideoView);
-                    binding.idVideoView.start();
+                protected void onPostExecute(String videoComp) {
+                    super.onPostExecute(videoComp);
+                    File file3=new File(videoComp);
+                    Log.d("AfterCompression", String.valueOf((file3.length()/(1024*1024))));
 
                 }
             }.execute();
-
 
         }
 

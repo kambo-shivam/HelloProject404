@@ -12,6 +12,7 @@ import com.appventurez.project404.R;
 import com.appventurez.project404.databinding.RecycleVideoListBinding;
 import com.appventurez.project404.ui.roomdatabase.RecyclerClickListener;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class VideoListRecycler extends RecyclerView.Adapter<VideoListRecycler.MyViewHolder> {
@@ -35,6 +36,8 @@ public class VideoListRecycler extends RecyclerView.Adapter<VideoListRecycler.My
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         String filename = allVideoList.get(position).substring(allVideoList.get(position).lastIndexOf("/") + 1);
         holder.mBinding.videoName.setText(filename);
+        File file = new File(allVideoList.get(position));
+        holder.mBinding.videoSize.setText("" + (file.length()) / (1024 * 1024));
         holder.mBinding.videoName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

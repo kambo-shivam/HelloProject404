@@ -72,9 +72,10 @@ dependencies {
 
     implementation "pl.droidsonroids.gif:android-gif-drawable:1.2.15"
     implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.2'
     implementation 'com.google.android.gms:play-services-ads:17.1.1'
     implementation 'com.google.code.gson:gson:2.8.2'
-    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.2'
+
 
     apply plugin: 'announce'
 
