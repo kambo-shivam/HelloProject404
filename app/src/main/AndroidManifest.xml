@@ -19,8 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.videoplay.VideoPlay"></activity>
-        <activity android:name=".ui.fragment.HomeBaseActivity"></activity>
+        <activity android:name=".ui.chatUi.ChatActivity"></activity>
+        <activity android:name=".ui.videoplay.VideoPlay" />
+        <activity android:name=".ui.fragment.HomeBaseActivity" />
         <activity android:name=".ui.downloadAndSave.DownloadAndSaveActivity" />
         <activity android:name=".ui.filehandling.FileHandlingActivity" />
         <activity android:name=".ui.newpostapi.AnotherPostApi" />

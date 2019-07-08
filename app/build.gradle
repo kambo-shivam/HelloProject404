@@ -30,6 +30,8 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.scaledrone:scaledrone-java:0.6.0'
+
 
     implementation 'com.android.support:cardview-v7:28.0.0'
 //    implementation 'com.android.support:customtabs:27.1.1'
@@ -78,7 +80,6 @@ dependencies {
 
 
     apply plugin: 'announce'
-
 
 
 }

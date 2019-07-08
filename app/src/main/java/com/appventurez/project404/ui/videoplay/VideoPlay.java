@@ -1,31 +1,23 @@
 package com.appventurez.project404.ui.videoplay;
-
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
-import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
-import android.widget.Toast;
-
 import com.appventurez.project404.R;
 import com.appventurez.project404.common.base.BaseActivity;
 import com.appventurez.project404.databinding.ActivityVideoPlayBinding;
 import com.appventurez.project404.ui.roomdatabase.RecyclerClickListener;
 import com.iceteck.silicompressorr.SiliCompressor;
-
 import java.io.File;
-import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -45,7 +37,6 @@ public class VideoPlay extends BaseActivity implements View.OnClickListener, Rec
         binding = DataBindingUtil.setContentView(this, R.layout.activity_video_play);
         binding.openVideoCamera.setOnClickListener(this);
         binding.playVideo.setOnClickListener(this);
-
         getAllMedia();
         setRecyclerView();
     }
@@ -83,14 +74,14 @@ public class VideoPlay extends BaseActivity implements View.OnClickListener, Rec
         switch (view.getId()) {
             case R.id.open_video_camera:
                 String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
-
                 Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-                // intent.putExtra(MediaStore.EXTRA_OUTPUT, string.getAbsolutePath());
+                /*StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+                StrictMode.setVmPolicy(builder.build());
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, string.getAbsolutePath()); */
                 startActivityForResult(intent, REQUEST);
                 break;
             case R.id.play_video:
                 if (uri != null) {
-
                     binding.idVideoView.setVideoURI(uri);
                     MediaController mediaController = new MediaController(this);
                     binding.idVideoView.setMediaController(mediaController);
@@ -156,19 +147,10 @@ public class VideoPlay extends BaseActivity implements View.OnClickListener, Rec
                     binding.idVideoView.start();
                 }
             }.execute(string);
-/*
-            binding.idVideoView.setVideoURI(Uri.parse(string));
-            MediaController mediaController = new MediaController(getApplicationContext());
-            binding.idVideoView.setMediaController(mediaController);
-            mediaController.setAnchorView(binding.idVideoView);
-            binding.idVideoView.start();*/
         }
 
     }
 }
 
-/*StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-                StrictMode.setVmPolicy(builder.build());
-                */
 
 

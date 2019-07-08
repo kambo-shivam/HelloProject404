@@ -16,10 +16,10 @@ import com.appventurez.project404.ui.roomdatabase.RecyclerClickListener;
 import java.util.List;
 
 public class LocalDbAdapter extends RecyclerView.Adapter<LocalDbAdapter.MyViewHolder> implements View.OnClickListener {
-    RecycleAdapterBinding mBinding;
-    Context context;
+    private RecycleAdapterBinding mBinding;
+    private Context context;
     private List<MyEntity> myEntities;
-    RecyclerClickListener clickListener;
+    private RecyclerClickListener clickListener;
 
     public LocalDbAdapter(Context context, List<MyEntity> myEntities, RecyclerClickListener clickListener) {
         this.context = context;
@@ -63,10 +63,10 @@ public class LocalDbAdapter extends RecyclerView.Adapter<LocalDbAdapter.MyViewHo
         }
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    class MyViewHolder extends RecyclerView.ViewHolder {
         RecycleAdapterBinding mBindingView;
 
-        public MyViewHolder(RecycleAdapterBinding itemView) {
+        MyViewHolder(RecycleAdapterBinding itemView) {
             super(itemView.getRoot());
             this.mBindingView = itemView;
 
