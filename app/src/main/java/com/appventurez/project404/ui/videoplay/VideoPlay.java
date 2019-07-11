@@ -1,4 +1,5 @@
 package com.appventurez.project404.ui.videoplay;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.databinding.DataBindingUtil;
@@ -12,11 +13,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
+
 import com.appventurez.project404.R;
 import com.appventurez.project404.common.base.BaseActivity;
 import com.appventurez.project404.databinding.ActivityVideoPlayBinding;
 import com.appventurez.project404.ui.roomdatabase.RecyclerClickListener;
 import com.iceteck.silicompressorr.SiliCompressor;
+
 import java.io.File;
 import java.text.DateFormat;
 import java.util.ArrayList;

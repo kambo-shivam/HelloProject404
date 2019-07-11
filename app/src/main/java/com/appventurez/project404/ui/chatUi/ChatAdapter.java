@@ -1,11 +1,15 @@
 package com.appventurez.project404.ui.chatUi;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyRecyclerView> {
+
+    public ChatAdapter(Context context) {
+    }
 
     @NonNull
     @Override
@@ -27,5 +31,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyRecyclerView
         public MyRecyclerView(@NonNull View itemView) {
             super(itemView);
         }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
     }
 }
